@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 using take.Facades.Interfaces;
 
-
 namespace take.Controllers
 {
     /// <summary>

@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0
+ARG BUILD_CONFIGURATION=Debug
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+EXPOSE 80
+
+WORKDIR /src
+COPY ["take.Facades/take.Facades.csproj", "take.Facades/"]
+COPY ["take.Models/take.Models.csproj", "take.Models/"]
+COPY ["take.Services/take.Services.csproj", "take.Services/"]
+COPY ["take/take.csproj", "take/"]
+
+RUN dotnet restore "take/take.csproj"
+COPY . .
+WORKDIR "/src/take"
+RUN dotnet build --no-restore "take.csproj" -c $BUILD_CONFIGURATION
+
+RUN echo "exec dotnet run --no-build --no-launch-profile -c $BUILD_CONFIGURATION --" > /entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]

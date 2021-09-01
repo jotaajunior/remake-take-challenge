@@ -11,6 +11,6 @@ namespace take.Facades.Interfaces
         /// <summary>
         /// Get the 5 oldest C# repositories
         /// </summary>
-        Task<IEnumerable<Repository>> GetOldesCsharpRepositories();
+        Task<IEnumerable<Repository>> GetOldestsCsharpRepositories();
     }
 }

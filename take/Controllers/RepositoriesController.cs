@@ -31,7 +31,7 @@ namespace take.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var repositories = await _repositoriesFacade.GetOldesCsharpRepositories();
+            var repositories = await _repositoriesFacade.GetOldestsCsharpRepositories();
 
             return Ok(repositories);
         }

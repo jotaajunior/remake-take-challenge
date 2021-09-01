@@ -85,7 +85,7 @@ namespace take.Tests.Facades
         [Fact]
         public async Task ShouldReturnOnlyCsharpRepositories()
         {
-            var result = await _repositoriesFacade.GetOldesCsharpRepositories();
+            var result = await _repositoriesFacade.GetOldestsCsharpRepositories();
 
             result.ShouldBe(fakeRepositories.Where(r => r.Language == "C#"));
         }

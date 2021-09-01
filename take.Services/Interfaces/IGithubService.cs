@@ -5,7 +5,6 @@ using take.Models;
 
 using RestEase;
 
-
 namespace take.Services.Interfaces
 {
     /// <summary>

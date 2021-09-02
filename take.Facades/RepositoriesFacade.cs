@@ -20,7 +20,7 @@ namespace take.Facades
         /// <summary>
         /// Get the 5 oldest C# repositories
         /// </summary>
-        public async Task<IEnumerable<Repository>> GetOldestsCsharpRepositories()
+        public async Task<IEnumerable<Repository>> GetOldestCsharpRepositories()
         {
             var repositories = await _githubService.GetRepositoriesAsync();
 

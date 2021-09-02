@@ -25,12 +25,12 @@ namespace take.Controllers
         }
 
         /// <summary>
-        /// Returns a list of the 5 oldes C# repositories.
+        /// Returns a list containing the 5 oldest C# repositories.
         /// </summary>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var repositories = await _repositoriesFacade.GetOldestsCsharpRepositories();
+            var repositories = await _repositoriesFacade.GetOldestCsharpRepositories();
 
             return Ok(repositories);
         }

@@ -16,7 +16,7 @@ namespace take.Services.Interfaces
         /// <summary>
         /// List of repositories
         /// </summary>
-        [Get("/repos")]
+        [Get("/repos?sort=created&direction=asc")]
         Task<List<Repository>> GetRepositoriesAsync();
     }
 }

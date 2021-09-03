@@ -27,7 +27,7 @@ namespace take.Tests.Facades
         [Fact]
         public async Task ShouldReturnListOfRepositories()
         {
-            var result = await _sut.GetOldestsCsharpRepositories();
+            var result = await _sut.GetOldestCsharpRepositories();
 
             result.ShouldBe(
                 TestsConstants

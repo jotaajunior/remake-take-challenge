@@ -33,7 +33,7 @@ namespace take.Facades.Extensions
         public static void AddSingletons(this IServiceCollection services, IConfiguration configuration)
         {
             var settings = configuration.GetSection(SETTINGS_SECTION).Get<ApiSettings>();
-            var githubService = RestClient.For<IGithubService>("https://api.github.com/users/takenet");
+            var githubService = RestClient.For<IGithubService>(settings.GithubSettings.BaseURL);
 
             services.AddSingleton(githubService);
 

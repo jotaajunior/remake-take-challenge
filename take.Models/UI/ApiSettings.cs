@@ -16,6 +16,11 @@
         public BlipBotSettings BlipBotSettings { get; set; }
 
         /// <summary>
+        /// Github's settings
+        /// </summary>
+        public GithubSettings GithubSettings { get; set; }
+
+        /// <summary>
         /// Sets wether or not the API should check for Bot's permission
         /// </summary>
         public bool CheckAuthorizationKey { get; set; }

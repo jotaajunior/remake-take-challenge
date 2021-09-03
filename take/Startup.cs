@@ -61,7 +61,7 @@ namespace take
             });
 
             services.AddSingletons(Configuration);
-            
+            services.AddMemoryCache();
 
             var settings = Configuration.GetSection(SETTINGS_SECTION).Get<ApiSettings>();
             services.UseBotAuthentication(settings.BlipBotSettings.Authorization);
